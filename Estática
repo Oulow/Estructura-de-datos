@@ -1,1 +1,28 @@
+public class Calificacion {
+    float promedio;
+    int cal1;
+    int cal2;
+    int cal3;
 
+    public Calificacion() {
+        promedio = 0;
+        cal1 = 0;
+        cal2 = 0;
+        cal3 = 0;
+    }
+
+    public Calificacion(int cal1, int cal2, int cal3) {
+        this.cal1 = cal1;
+        this.cal2 = cal2;
+        this.cal3 = cal3;
+    }
+
+    void setPromedio() {
+        promedio = (cal1 + cal2 + cal3) / 3;
+    }
+
+    void showPromedio() {
+        System.out.println("Las calificaciones son: " + cal1 + " " + cal2 + " " + cal3);
+        System.out.println("El promedio es: " + promedio);
+    }
+}
