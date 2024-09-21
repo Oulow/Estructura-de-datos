@@ -1,1 +1,7 @@
 
+    public static void main(String[] args) {
+        Rectangulo rectangulo1 = new Rectangulo(10, 5);
+        System.out.println("El area del rectangulo es: " + rectangulo1.calcArea());
+        System.out.println("El perimetro del rectangulo es: " + rectangulo1.calcPerimetro());
+    }
+}
