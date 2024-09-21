@@ -1,22 +1,3 @@
-package com.mycompany.rombo;
-
-public class Rombo {
-    private double lado;
-    private double altura;
-
-    public Rombo(double l, double h) {
-        lado = l;
-        altura = h;
-    }
-
-    public double AreaRombo() {
-        return lado * altura;
-    }
-
-    public double Perimetro() {
-        return lado * 4;
-    }
-}
 -------------------------------------------
 
 import java.util.Scanner;
