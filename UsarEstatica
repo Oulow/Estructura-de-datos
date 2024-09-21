@@ -1,1 +1,9 @@
+public class CalificacionTest {
+    public static void main(String[] args) {
+        // TODO code application logic here
 
+        Calificacion oper = new Calificacion(10, 8, 10);
+        oper.setPromedio();
+        oper.showPromedio();
+    }
+}
