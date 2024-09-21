@@ -1,1 +1,15 @@
+public class SubsecuenciaMaxima {
+    public static int encontrarSumaMaxima(int[] arreglo) {
+        int n = arreglo.length;
+        int sumaMaxima = Integer.MIN_VALUE; // Inicializamos con el valor mínimo posible
 
+        for (int i = 0; i < n; i++) {
+            int sumaActual = 0;
+            for (int j = i; j < n; j++) {
+                sumaActual += arreglo[j]; // Sumamos los elementos de la subsecuencia
+                sumaMaxima = Math.max(sumaMaxima, sumaActual); // Actualizamos la suma máxima si es necesario
+            }
+        }
+        return sumaMaxima;
+    }
+}
