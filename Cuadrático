@@ -1,1 +1,40 @@
+public class Cuadratico {
+    // Encuentra la subsecuencia contigua con la suma máxima en un arreglo
+    public static int[] subsecuenciaSumaMaxima(int[] a) {
+        int sumaMax = 0; // Almacena la suma máxima encontrada hasta ahora
+        int secIni = 0;  // Índice de inicio de la subsecuencia con la suma máxima
+        int secFin = 0;  // Índice final de la subsecuencia con la suma máxima
 
+        for (int i = 0; i < a.length; i++) {
+            int sumaActual = 0; // Suma de la subsecuencia actual
+
+            for (int j = i; j < a.length; j++) {
+                sumaActual += a[j]; // Sumamos el siguiente elemento a la suma actual
+
+                if (sumaActual > sumaMax) {
+                    // Si la suma actual es mayor que la máxima encontrada hasta ahora,
+                    // actualizamos la suma máxima y los índices de inicio y fin
+                    sumaMax = sumaActual;
+                    secIni = i;
+                    secFin = j;
+                }
+            }
+        }
+
+        // Creamos un arreglo para almacenar el resultado y lo llenamos con los valores
+        int[] resultado = new int[3];
+        resultado[0] = sumaMax;
+        resultado[1] = secIni;
+        resultado[2] = secFin;
+
+        return resultado;
+    }
+
+    public static void main(String[] args) {
+        int[] a = {1, 1, 2, 2, 1, 2, 1, 2, 22};
+        int[] resultado = subsecuenciaSumaMaxima(a);
+
+        System.out.println("Suma máxima: " + resultado[0]);
+        System.out.println("Índices de inicio y fin: " + resultado[1] + " y " + resultado[2]);
+    }
+}
