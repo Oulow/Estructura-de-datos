@@ -18,28 +18,6 @@ public class Rombo {
     }
 }
 
----------------------------------------------
-package com.mycompany.proyecto2;
-
-public class Proyecto2 {
-    public static class Rectangulo {
-        private final double base;
-        private final double altura;
-
-        public Rectangulo(double b, double a) {
-            base = b;
-            altura = a;
-        }
-
-        public double calcArea() {
-            return base * altura;
-        }
-
-        public double calcPerimetro() {
-            return 2 * (base + altura);
-        }
-    }
-
     public static void main(String[] args) {
         Rectangulo rectangulo1 = new Rectangulo(10, 5);
         System.out.println("El area del rectangulo es: " + rectangulo1.calcArea());
