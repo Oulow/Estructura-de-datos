@@ -19,12 +19,6 @@ public class Rombo {
 }
 
 ---------------------------------------------
-
-Rombo miRombo = new Rombo(5.0, 3.0);
-double area = miRombo.AreaRombo();
-double perimetro = miRombo.Perimetro();
-
----------------------------------------------
 package com.mycompany.proyecto2;
 
 public class Proyecto2 {
