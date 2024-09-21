@@ -1,0 +1,15 @@
+package com.mycompany.tda;
+
+public class CilindroEjecutar {
+    public static void main(String[] args) {
+        
+        double radio = 5.0; 
+        double altura = 10.0; 
+
+       
+        Cilindro cilindro = new Cilindro(radio, altura);
+
+        double volumen = cilindro.calcularVolumen();
+        System.out.println("El volumen del cilindro es: " + volumen);
+    }
+}
