@@ -1,1 +1,44 @@
+import java.util.Scanner;
 
+public class Calificacion {
+    private double[] calificaciones;
+
+    public Calificacion(int cantidadCalificaciones) {
+        this.calificaciones = new double[cantidadCalificaciones];
+    }
+
+    public void agregaCal(int indice, double calificacion) {
+        this.calificaciones[indice] = calificacion;
+    }
+
+    public double calcPromedio() {
+        double suma = 0;
+        for (double calificacion : calificaciones) {
+            suma += calificacion;
+        }
+        return suma / calificaciones.length;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese la cantidad de calificaciones: ");
+        int cantidadCalificaciones = scanner.nextInt();
+
+        Calificacion miCalificacion = new Calificacion(cantidadCalificaciones);
+
+        for (int i = 0; i < cantidadCalificaciones; i++) {
+            System.out.print("Ingrese la calificación " + (i + 1) + ": ");
+            double calificacion = scanner.nextDouble();
+            miCalificacion.agregaCal(i, calificacion);
+        }
+
+        double promedio = miCalificacion.calcPromedio();
+        System.out.println("El promedio es: " + promedio);
+
+        if (promedio >= 70) {
+            System.out.println("La calificación es excelente");
+        } else {
+            System.out.println("La calificación no es aprobatoria");
+        }
+    }
+}
